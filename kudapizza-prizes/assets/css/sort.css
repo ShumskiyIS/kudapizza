@@ -1,0 +1,127 @@
+.catalog{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+.catalog__content{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+}
+.catalog__header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    align-items: center;
+}
+.catalog__sort{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: max-content;
+    height: max-content;
+    padding: 8px 16px 8px 16px;
+    border: 1px solid #F0F0F0;
+    background-color: white;
+    border-radius: 6px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    gap: 8px;
+}
+.catalog__sort:hover{
+    scale: 1.1;
+    transition: 0.5s;
+}
+.catalog__pizza{
+    width: 100%;
+    height: max-content;
+    display: grid;
+    align-items: stretch;
+    gap: 10px;
+    grid-template-columns: repeat(4, 1fr);
+    margin-top: 20px;
+}
+
+/*item css*/
+.catalog__pizza-item{
+    display: flex;
+    flex-direction: column;
+    height: max-content;
+    border-radius: 12px;
+    background-color: white;
+    border-color: transparent;
+    border-radius: 12px;
+    border: 1px solid #F0F0F0;
+}
+.catalog__pizza-item:hover{
+    scale: 1.01;
+    box-shadow: 0 4px 4px rgba(0,0,0,0.25);
+    transition: 0.5s;
+}
+
+/* НЕЧЁТНЫЕ — высокие */
+.catalog__pizza-item:nth-child(odd) {
+    aspect-ratio: 3 / 4;
+}
+
+/* ЧЁТНЫЕ — ниже */
+.catalog__pizza-item:nth-child(even) {
+    aspect-ratio: 3 / 3;
+}
+
+.catalog__pizza-item-fir:hover{
+    scale: 1.01;
+    box-shadow: 0 4px 4px rgba(0,0,0,0.25);
+    transition: 0.5s;
+}
+
+.catalog__pizza-item-image{
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    height: max-content;
+    position: relative;
+}
+.catalog__pizza-item-img{
+    width: 100%;
+    height: 100%;
+}
+.catalog__pizza-item-span{
+    width: max-content;
+    height: max-content;
+    padding: 7px 16px 7px 16px;
+    border-radius: 0px 5px 5px 0px;
+    background-color: red;
+    position: absolute;
+    margin-top: 20px;
+    color: white;
+}
+.catalog__pizza-item-text{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 16px 20px 16px 20px;
+}
+.catalog__pizza-item-bap{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0px 20px 20px 20px;
+    align-items: center;
+}
+.catalog__pizza-item-bap:hover{
+    scale: 1.01;
+    transition: 0.5s;
+}
+.catalog__pizza-item-bap-button{
+    width: max-content;
+    height: max-content;
+    padding: 14px 32px 14px 32px;
+    color: white;
+    background-color: #FF7010;
+    border-radius: 6px;
+    border-color: transparent;
+}
+

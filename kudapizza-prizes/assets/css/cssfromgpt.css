@@ -1,0 +1,129 @@
+.catalog{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.catalog__content{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+}
+
+.catalog__header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.catalog__sort{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 16px;
+    border: 1px solid #F0F0F0;
+    background-color: white;
+    border-radius: 6px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    gap: 8px;
+    cursor: pointer;
+}
+.catalog__sort:hover{
+    scale: 1.1;
+    transition: 0.5s;
+}
+
+/* GRID */
+.catalog__pizza{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    margin-top: 20px;
+}
+
+/* ============================= */
+/*    CARD — unified class       */
+/* ============================= */
+.catalog__pizza-item{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 12px;
+    border: 1px solid #F0F0F0;
+    overflow: hidden; /* важно! убирает линии */
+}
+
+.catalog__pizza-item:hover{
+    scale: 1.01;
+    box-shadow: 0 4px 4px rgba(0,0,0,0.25);
+    transition: 0.5s;
+}
+
+/* ============================= */
+/*  CARD HEIGHTS (EVEN / ODD)   */
+/* ============================= */
+
+/* НЕЧЁТНЫЕ — высокие */
+.catalog__pizza-item:nth-child(odd) {
+    aspect-ratio: 3 / 4;
+}
+
+/* ЧЁТНЫЕ — ниже */
+.catalog__pizza-item:nth-child(even) {
+    aspect-ratio: 3 / 3;
+}
+
+/* ============================= */
+/*          IMAGE BLOCK          */
+/* ============================= */
+
+.catalog__pizza-item-image{
+    width: 100%;
+    height: 50%; /* верхняя половина */
+    position: relative;
+}
+
+.catalog__pizza-item-img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* растягиваем изображение */
+}
+
+.catalog__pizza-item-span{
+    padding: 7px 16px;
+    border-radius: 0 5px 5px 0;
+    background-color: red;
+    position: absolute;
+    top: 20px;
+    left: 0;
+    color: white;
+}
+
+/* TEXT */
+.catalog__pizza-item-text{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 16px 20px;
+    flex-grow: 1;
+}
+
+/* BUTTON + PRICE */
+.catalog__pizza-item-bap{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px 20px 20px;
+}
+
+.catalog__pizza-item-bap-button{
+    padding: 14px 32px;
+    color: white;
+    background-color: #FF7010;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+}

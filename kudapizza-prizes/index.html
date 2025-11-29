@@ -5,12 +5,155 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>kudapizza-prizes</title>
     <link rel="stylesheet" href="./assets/css/prizes.css">
+    <link rel="stylesheet" href="./assets/css/sort.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
     <main>
+        <section class="catalog">
+            <div class="catalog__content">
+                <div class="catalog__header">
+                    <h2>Пицца</h2>
+                    <button class="catalog__sort">
+                        <img src="./assets/img/sort.svg" alt="sort image" class="catalog__sort-button">
+                        <span class="catalog__sort-span">Фильтры</span>
+                    </button>
+                </div>
+                <div class="catalog__pizza">
+                    <!--Item start  1-->
+                    <div class="catalog__pizza-item">
+                        <div class="catalog__pizza-item-image">
+                            <span class="catalog__pizza-item-span">NEW</span>
+                            <img src="./assets/img/pizza/ChickenSweetChili.png" alt="Chicken Sweet Chili Pizza" class="catalog__pizza-item-img">
+                        </div>
+                        <div class="catalog__pizza-item-text">
+                            <span class="catalog__pizza-item-text-span">Чикен Сладкий Чили</span>
+                            <p class="catalog__pizza-item-text-span">Курица, Лук, Перец Халапеньо, Сыр Моцарелла, Томатный соу...</p>
+                        </div>
+                        <div class="catalog__pizza-item-bap"> <!--bap (button and price)-->
+                            <button class="catalog__pizza-item-bap-button">Выбрать</button>
+                            <span class="catalog__pizza-item-bap-span">от 399 &#8381</span>
+                        </div>
+                    </div>
+                    <!--Item finish-->
+
+                    <!--Item start 2-->
+                    <div class="catalog__pizza-item">
+                        <div class="catalog__pizza-item-image">
+                            <span class="catalog__pizza-item-span">ХИТ</span>
+                            <img src="./assets/img/pizza/EasyPeasyPickles.png" alt="Chicken Sweet Chili Pizza" class="catalog__pizza-item-img">
+                        </div>
+                        <div class="catalog__pizza-item-text">
+                            <span class="catalog__pizza-item-text-span">EASY PEASY огуречный расколбас</span>
+                            <p class="catalog__pizza-item-text-span">Курица, Лук, Перец Халапеньо...</p>
+                        </div>
+                        <div class="catalog__pizza-item-bap"> <!--bap (button and price)-->
+                            <button class="catalog__pizza-item-bap-button">Выбрать</button>
+                            <span class="catalog__pizza-item-bap-span">от 549 &#8381</span>
+                        </div>
+                    </div>
+                    <!--Item finish-->
+
+                    <!--Item start   3-->
+                    <div class="catalog__pizza-item">
+                        <div class="catalog__pizza-item-image">
+                            <img src="./assets/img/pizza/EasyPeasyChickenHren.png" alt="Chicken Sweet Chili Pizza" class="catalog__pizza-item-img">
+                        </div>
+                        <div class="catalog__pizza-item-text">
+                            <span class="catalog__pizza-item-text-span">EASY PEASY чикен а-ля хрен</span>
+                            <p class="catalog__pizza-item-text-span">Курица, Лук, Соус Карбонара,...</p>
+                        </div>
+                        <div class="catalog__pizza-item-bap"> <!--bap (button and price)-->
+                            <button class="catalog__pizza-item-bap-button">Выбрать</button>
+                            <span class="catalog__pizza-item-bap-span">от 249 &#8381</span>
+                        </div>
+                    </div>
+                    <!--Item finish-->
+
+                    <!--Item start  4-->
+                    <div class="catalog__pizza-item">
+                        <div class="catalog__pizza-item-image">
+                            <img src="./assets/img/pizza/FourSeasons.png" alt="Chicken Sweet Chili Pizza" class="catalog__pizza-item-img">
+                        </div>
+                        <div class="catalog__pizza-item-text">
+                            <span class="catalog__pizza-item-text-span">4 сезона</span>
+                            <p class="catalog__pizza-item-text-span">Бекон, Ветчина, Грибы, Курица, Лук, Маслины, Огурцы мари...</p>
+                        </div>
+                        <div class="catalog__pizza-item-bap"> <!--bap (button and price)-->
+                            <button class="catalog__pizza-item-bap-button">Выбрать</button>
+                            <span class="catalog__pizza-item-bap-span">от 630 &#8381</span>
+                        </div>
+                    </div>
+                    <!--Item finish-->
+
+                    <!--Item start  5-->
+                    <div class="catalog__pizza-item">
+                        <div class="catalog__pizza-item-image">
+                            <img src="./assets/img/pizza/FourSeasons.png" alt="Chicken Sweet Chili Pizza" class="catalog__pizza-item-img">
+                        </div>
+                        <div class="catalog__pizza-item-text">
+                            <span class="catalog__pizza-item-text-span">4 сезона</span>
+                            <p class="catalog__pizza-item-text-span">Бекон, Ветчина, Грибы, Курица, Лук, Маслины, Огурцы мари...</p>
+                        </div>
+                        <div class="catalog__pizza-item-bap"> <!--bap (button and price)-->
+                            <button class="catalog__pizza-item-bap-button">Выбрать</button>
+                            <span class="catalog__pizza-item-bap-span">от 630 &#8381</span>
+                        </div>
+                    </div>
+                    <!--Item finish-->
+
+                    <!--Item start   6-->
+                    <div class="catalog__pizza-item">
+                        <div class="catalog__pizza-item-image">
+                            <img src="./assets/img/pizza/EasyPeasyChickenHren.png" alt="Chicken Sweet Chili Pizza" class="catalog__pizza-item-img">
+                        </div>
+                        <div class="catalog__pizza-item-text">
+                            <span class="catalog__pizza-item-text-span">EASY PEASY чикен а-ля хрен</span>
+                            <p class="catalog__pizza-item-text-span">Курица, Лук, Соус Карбонара,...</p>
+                        </div>
+                        <div class="catalog__pizza-item-bap"> <!--bap (button and price)-->
+                            <button class="catalog__pizza-item-bap-button">Выбрать</button>
+                            <span class="catalog__pizza-item-bap-span">от 249 &#8381</span>
+                        </div>
+                    </div>
+                    <!--Item finish-->
+
+                    <!--Item start  7-->
+                    <div class="catalog__pizza-item">
+                        <div class="catalog__pizza-item-image">
+                            <img src="./assets/img/pizza/ChickenSweetChili.png" alt="Chicken Sweet Chili Pizza" class="catalog__pizza-item-img">
+                        </div>
+                        <div class="catalog__pizza-item-text">
+                            <span class="catalog__pizza-item-text-span">Чикен Сладкий Чили</span>
+                            <p class="catalog__pizza-item-text-span">Курица, Лук, Перец Халапеньо, Сыр Моцарелла, Томатный соу...</p>
+                        </div>
+                        <div class="catalog__pizza-item-bap"> <!--bap (button and price)-->
+                            <button class="catalog__pizza-item-bap-button">Выбрать</button>
+                            <span class="catalog__pizza-item-bap-span">от 399 &#8381</span>
+                        </div>
+                    </div>
+                    <!--Item finish-->
+
+                    <!--Item start  8-->
+                    <div class="catalog__pizza-item">
+                        <div class="catalog__pizza-item-image">
+                            <img src="./assets/img/pizza/EasyPeasyPickles.png" alt="Chicken Sweet Chili Pizza" class="catalog__pizza-item-img">
+                        </div>
+                        <div class="catalog__pizza-item-text">
+                            <span class="catalog__pizza-item-text-span">EASY PEASY огуречный расколбас</span>
+                            <p class="catalog__pizza-item-text-span">Курица, Лук, Перец Халапеньо...</p>
+                        </div>
+                        <div class="catalog__pizza-item-bap"> <!--bap (button and price)-->
+                            <button class="catalog__pizza-item-bap-button">Выбрать</button>
+                            <span class="catalog__pizza-item-bap-span">от 549 &#8381</span>
+                        </div>
+                    </div>
+                    <!--Item finish-->
+                </div>
+            </div>
+        </section>
         <section class="prizes">
             <div class="prizes__content">
                 <img src="./assets/img/prizes_image.png" alt="top image" class="prizes__image">
