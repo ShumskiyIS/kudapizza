@@ -17,7 +17,9 @@
                 <div class="catalog__header">
                     <h2>Пицца</h2>
                     <button class="catalog__sort">
-                        <img src="./assets/img/sort.svg" alt="sort image" class="catalog__sort-button">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6.33333 16C6.27667 16 6.22 15.986 6.16933 15.9567C6.06467 15.8973 6 15.7867 6 15.6667V8.932C6 8.646 5.87733 8.374 5.664 8.18467L0.558667 3.64933C0.204 3.33533 0 2.87933 0 2.4V1C0 0.448667 0.448667 0 1 0H15C15.5513 0 16 0.448667 16 1V2.4C16 2.87933 15.796 3.33533 15.4407 3.65L10.336 8.18533C10.1227 8.37467 10 8.64667 10 8.932V13.2887C10 13.6373 9.81467 13.966 9.51467 14.146L6.504 15.952C6.452 15.984 6.39267 16 6.33333 16ZM1 0.666667C0.816667 0.666667 0.666667 0.816 0.666667 1V2.4C0.666667 2.68867 0.788667 2.96267 1.00067 3.15L6.10667 7.686C6.462 8.002 6.66667 8.456 6.66667 8.932V15.078L9.172 13.5753C9.27133 13.5153 9.33333 13.4053 9.33333 13.2893V8.93267C9.33333 8.45667 9.538 8.002 9.89333 7.68667L14.9987 3.15133C15.2113 2.96267 15.3333 2.68867 15.3333 2.4V1C15.3333 0.816 15.1833 0.666667 15 0.666667H1Z" fill="#FF7010"/>
+                        </svg>
                         <span class="catalog__sort-span">Фильтры</span>
                     </button>
                 </div>
@@ -167,7 +169,285 @@
                 <button class="prizes__button" data-text="Меньше">Подбробнее</button>
             </div>
         </section>
+        <script src="./assets/js/script.js"></script>
     </main>
-    <script src="./assets/js/script.js"></script>
+    <div class="popup-filter">
+        <div class="popup-filter__content">
+            <div class="popup-filter__header">
+                <h2>Фильтры</h2>
+                <button class="popup-filter__header-button">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_230_22549)">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M1.33213 0.228557C1.02739 -0.0761858 0.5333 -0.0761858 0.228557 0.228557C-0.0761858 0.533301 -0.0761858 1.02739 0.228557 1.33213L10.8964 12L0.228564 22.6679C-0.0761791 22.9726 -0.0761791 23.4667 0.228564 23.7714C0.533307 24.0762 1.02739 24.0762 1.33214 23.7714L12 13.1036L22.6679 23.7714C22.9726 24.0762 23.4667 24.0762 23.7714 23.7714C24.0762 23.4667 24.0762 22.9726 23.7714 22.6679L13.1036 12L23.7714 1.33213C24.0762 1.02739 24.0762 0.533302 23.7714 0.228559C23.4667 -0.0761838 22.9726 -0.0761838 22.6679 0.228559L12 10.8964L1.33213 0.228557Z" fill="#A5A5A5"/>
+                    </g>
+                    <defs>
+                    <clipPath id="clip0_230_22549">
+                    <rect width="24" height="24" fill="white"/>
+                    </clipPath>
+                    </defs>
+                    </svg>
+                </button>
+            </div>
+            <div class="popup-filter__block">
+                <span class="block-span">Общее</span>
+                <div class="block-items">
+
+                    <!--Item started-->
+                    <label class="popup-filter-buttons-parameter">
+                        <input type="checkbox" name="checkbox" class="popup-filter__input">
+                        <span class="popup-filter__span">Хит</span>
+                    </label>
+                    <!--Item finished-->
+
+                    <!--Item started-->
+                    <label class="popup-filter-buttons-parameter">
+                        <input type="checkbox" name="checkbox" class="popup-filter__input">
+                        <span class="popup-filter__span">Новинка</span>
+                    </label>
+                    <!--Item finished-->
+
+                    <!--Item started-->
+                    <label class="popup-filter-buttons-parameter">
+                        <input type="checkbox" name="checkbox" class="popup-filter__input">
+                        <span class="popup-filter__span">С мясом</span>
+                    </label>
+                    <!--Item finished-->
+
+                    <!--Item started-->
+                    <label class="popup-filter-buttons-parameter">
+                        <input type="checkbox" name="checkbox" class="popup-filter__input">
+                        <span class="popup-filter__span">Вегетарианская</span>
+                    </label>
+                    <!--Item finished-->
+
+                    <!--Item started-->
+                    <label class="popup-filter-buttons-parameter">
+                        <input type="checkbox" name="checkbox" class="popup-filter__input">
+                        <span class="popup-filter__span">С курицей</span>
+                    </label>
+                    <!--Item finished-->
+
+                    <!--Item started-->
+                    <label class="popup-filter-buttons-parameter">
+                        <input type="checkbox" name="checkbox" class="popup-filter__input">
+                        <span class="popup-filter__span">Без лука</span>
+                    </label>
+                    <!--Item finished-->
+
+                    <!--Item started-->
+                    <label class="popup-filter-buttons-parameter">
+                        <input type="checkbox" name="checkbox" class="popup-filter__input">
+                        <span class="popup-filter__span">С грибами</span>
+                    </label>
+                    <!--Item finished-->
+
+                    <!--Item started-->
+                    <label class="popup-filter-buttons-parameter">
+                        <input type="checkbox" name="checkbox" class="popup-filter__input">
+                        <span class="popup-filter__span">С морепродуктами</span>
+                    </label>
+                    <!--Item finished-->
+
+                    <!--Item started-->
+                    <label class="popup-filter-buttons-parameter">
+                        <input type="checkbox" name="checkbox" class="popup-filter__input">
+                        <span class="popup-filter__span">Барбекью</span>
+                    </label>
+                    <!--Item finished-->
+                </div>
+            </div>
+            <div class="popup-filter__block">
+                <span class="block-span">Сыр</span>
+                <div class="block-items">
+                    <!--Item started-->
+                    <label class="popup-filter-buttons-parameter">
+                        <input type="checkbox" name="checkbox" class="popup-filter__input">
+                        <span class="popup-filter__span">Реджанито</span>
+                    </label>
+                    <!--Item finished-->
+                    
+                    <!--Item started-->
+                    <label class="popup-filter-buttons-parameter">
+                        <input type="checkbox" name="checkbox" class="popup-filter__input">
+                        <span class="popup-filter__span">Моцарелла</span>
+                    </label>
+                    <!--Item finished-->
+
+                    <!--Item started-->
+                    <label class="popup-filter-buttons-parameter">
+                        <input type="checkbox" name="checkbox" class="popup-filter__input">
+                        <span class="popup-filter__span">Чеддер</span>
+                    </label>
+                    <!--Item finished-->
+
+                    <!--Item started-->
+                    <label class="popup-filter-buttons-parameter">
+                        <input type="checkbox" name="checkbox" class="popup-filter__input">
+                        <span class="popup-filter__span">С голубой плесенью</span>
+                    </label>
+                    <!--Item finished-->
+
+                    <!--Item started-->
+                    <label class="popup-filter-buttons-parameter">
+                        <input type="checkbox" name="checkbox" class="popup-filter__input">
+                        <span class="popup-filter__span">Смесь итальянских сыров</span>
+                    </label>
+                    <!--Item finished-->
+
+                    <!--Item started-->
+                    <label class="popup-filter-buttons-parameter">
+                        <input type="checkbox" name="checkbox" class="popup-filter__input">
+                        <span class="popup-filter__span">Мягкий молодой сыр</span>
+                    </label>
+                    <!--Item finished-->
+                </div>
+            </div>
+            <div class="popup-filter__block">
+                <span class="block-span">Мясо</span>
+                <div class="block-items">
+                    <!--Item started-->
+                    <label class="popup-filter-buttons-parameter">
+                        <input type="checkbox" name="checkbox" class="popup-filter__input">
+                        <span class="popup-filter__span">Пепперони</span>
+                    </label>
+                    <!--Item finished-->
+
+                    <!--Item started-->
+                    <label class="popup-filter-buttons-parameter">
+                        <input type="checkbox" name="checkbox" class="popup-filter__input">
+                        <span class="popup-filter__span">Свинина</span>
+                    </label>
+                    <!--Item finished-->
+
+                    <!--Item started-->
+                    <label class="popup-filter-buttons-parameter">
+                        <input type="checkbox" name="checkbox" class="popup-filter__input">
+                        <span class="popup-filter__span">Ветчина</span>
+                    </label>
+                    <!--Item finished-->
+
+                    <!--Item started-->
+                    <label class="popup-filter-buttons-parameter">
+                        <input type="checkbox" name="checkbox" class="popup-filter__input">
+                        <span class="popup-filter__span">Бекон</span>
+                    </label>
+                    <!--Item finished-->
+
+                    <!--Item started-->
+                    <label class="popup-filter-buttons-parameter">
+                        <input type="checkbox" name="checkbox" class="popup-filter__input">
+                        <span class="popup-filter__span">Говядина</span>
+                    </label>
+                    <!--Item finished-->
+
+                    <!--Item started-->
+                    <label class="popup-filter-buttons-parameter">
+                        <input type="checkbox" name="checkbox" class="popup-filter__input">
+                        <span class="popup-filter__span">Чоризо</span>
+                    </label>
+                    <!--Item finished-->
+
+                    <!--Item started-->
+                    <label class="popup-filter-buttons-parameter">
+                        <input type="checkbox" name="checkbox" class="popup-filter__input">
+                        <span class="popup-filter__span">Колбаски</span>
+                    </label>
+                    <!--Item finished-->
+
+                    <!--Item started-->
+                    <label class="popup-filter-buttons-parameter">
+                        <input type="checkbox" name="checkbox" class="popup-filter__input">
+                        <span class="popup-filter__span">Куринная грудка</span>
+                    </label>
+                    <!--Item finished-->
+                </div>
+            </div>
+            <div class="popup-filter__block">
+                <span class="block-span">Компонент</span>
+                <div class="block-items">
+                    <!--Item started-->
+                    <label class="popup-filter-buttons-parameter">
+                        <input type="checkbox" name="checkbox" class="popup-filter__input">
+                        <span class="popup-filter__span">Креветка</span>
+                    </label>
+                    <!--Item finished-->
+
+                    <!--Item started-->
+                    <label class="popup-filter-buttons-parameter">
+                        <input type="checkbox" name="checkbox" class="popup-filter__input">
+                        <span class="popup-filter__span">Ананасы</span>
+                    </label>
+                    <!--Item finished-->
+
+                    <!--Item started-->
+                    <label class="popup-filter-buttons-parameter">
+                        <input type="checkbox" name="checkbox" class="popup-filter__input">
+                        <span class="popup-filter__span">Шампиньоны</span>
+                    </label>
+                    <!--Item finished-->
+
+                    <!--Item started-->
+                    <label class="popup-filter-buttons-parameter">
+                        <input type="checkbox" name="checkbox" class="popup-filter__input">
+                        <span class="popup-filter__span">Лук</span>
+                    </label>
+                    <!--Item finished-->
+
+                    <!--Item started-->
+                    <label class="popup-filter-buttons-parameter">
+                        <input type="checkbox" name="checkbox" class="popup-filter__input">
+                        <span class="popup-filter__span">Перец халапеньо</span>
+                    </label>
+                    <!--Item finished-->
+
+                    <!--Item started-->
+                    <label class="popup-filter-buttons-parameter">
+                        <input type="checkbox" name="checkbox" class="popup-filter__input">
+                        <span class="popup-filter__span">Орегано</span>
+                    </label>
+                    <!--Item finished-->
+
+                    <!--Item started-->
+                    <label class="popup-filter-buttons-parameter">
+                        <input type="checkbox" name="checkbox" class="popup-filter__input">
+                        <span class="popup-filter__span">Зеленый перец</span>
+                    </label>
+                    <!--Item finished-->
+
+                    <!--Item started-->
+                    <label class="popup-filter-buttons-parameter">
+                        <input type="checkbox" name="checkbox" class="popup-filter__input">
+                        <span class="popup-filter__span">Оливки</span>
+                    </label>
+                    <!--Item finished-->
+
+                    <!--Item started-->
+                    <label class="popup-filter-buttons-parameter">
+                        <input type="checkbox" name="checkbox" class="popup-filter__input">
+                        <span class="popup-filter__span">Маслины</span>
+                    </label>
+                    <!--Item finished-->
+
+                    <!--Item started-->
+                    <label class="popup-filter-buttons-parameter">
+                        <input type="checkbox" name="checkbox" class="popup-filter__input">
+                        <span class="popup-filter__span">Клубника</span>
+                    </label>
+                    <!--Item finished-->
+
+                    <!--Item started-->
+                    <label class="popup-filter-buttons-parameter">
+                        <input type="checkbox" name="checkbox" class="popup-filter__input">
+                        <span class="popup-filter__span">Смесь итальянских трав</span>
+                    </label>
+                    <!--Item finished-->
+                </div>
+            </div>
+            <div class="popup-filter__buttons">
+                <button class="popup-filter__footer-btn">Сбросить</button>
+                <button class="popup-filter__footer-btn">Применить</button>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
