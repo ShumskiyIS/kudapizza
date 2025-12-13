@@ -1,63 +1,326 @@
-// выводит окошко на экран
-//alert('Alert!');
-
-/*document.querySelector('.info__link').addEventListener('click', function () {
-    this.remove();
-    document.querySelector('.info__text').classList.add('info__text--active');
-});*/
-
-/*
-let buttonText; 
-let counter = 1;
-
-document.querySelector('.info__link').addEventListener('click', function () {
-
-    document.querySelector('.info__text').classList.toggle('info__text--active');
-
-    if (counter % 2 == 0) {
-        buttonText = "Показать полностью";
-    } else {
-        buttonText = "Скрыть текст";
+// ждем полной загрузки страницы
+document.addEventListener('DOMContentLoaded', function () {
+    
+    // раскрытие текста в блоке info
+    const infoLink = document.querySelector('.info__link')
+    if (infoLink) {
+        infoLink.addEventListener('click', function () {
+            const infoText = document.querySelector('.info__text')
+            if (infoText) {
+                infoText.classList.toggle('info__text--active');
+                let buttonText = this.textContent;
+                this.textContent = this.dataset.hello;
+                this.dataset.hello =  buttonText;
+            }
+        })
     }
 
-    this.textContent = buttonText;
+    // открытие попапа фильтра
+    const popupFilter = document.querySelector('.popup-filter');
+    if (popupFilter) {
+        const buttonPopup = document.querySelector('.catalog__filter');
+        if (buttonPopup) {
+            buttonPopup.addEventListener('click', function () {
+                document.body.classList.add('no-scroll');
+                popupFilter.classList.add('popup-filter--show')
+                setTimeout(function () {
+                    popupFilter.classList.add('popup-filter--active')
+                }, 10);
+            })
+        }
 
-    counter++;
-});
-*/
+        const buttonPopupClose = document.querySelector('.popup-filter__close');
+        if (buttonPopupClose) {
+            buttonPopupClose.addEventListener('click', function () {
+                popupFilter.classList.remove('popup-filter--active')
+                setTimeout(function () {
+                    popupFilter.classList.remove('popup-filter--show')
+                    document.body.classList.remove('no-scroll');
+                }, 300);
+            });
+        }
+    }
 
-/*
-let buttonText; 
-let counter = 1;
+    // формирование групп фильтров в попапе
+    const titles = [
+        "Общее",
+        "Сыр",
+        "Мясо",
+        "Компонент"
+    ];
 
-document.querySelector('.info__link').addEventListener('click', function () {
+    const buttons = [
+        [
+            "Супер хит",
+            'Новинка',
+            "С мясом",
+            "Вегетарианская",
+            "С курицей",
+            "Без лука",
+            "С грибами",
+            "С морепродуктами",
+            "Барбекью"
+        ],
+        [
+            "Реджанито",
+            "Моцарелла",
+            "Чеддер",
+            "С голубой плесенью",
+            "Смесь итальянских сыров",
+            "Мягкий молодой сыр лука",
+        ],
+        [
+            "Пепперони",
+            "Свинина",
+            "Ветчина",
+            "Бекон",
+            "Говядина",
+            "Чоризо",
+            "Колбаски",
+            "Куриная грудка",
+        ],
+        [
+            "Креветка",
+            "Ананасы",
+            "Шампиньоны",
+            "Лук",
+            "Перец халапеньо",
+            "Орегано",
+            "Зеленый перец",
+            "Томаты",
+            "Чеснок",
+            "Красный перец",
+            "Оливки",
+            "Маслины",
+            "Клубника",
+            "Смесь итальянских трав",
+        ]
+    ];
 
-    document.querySelector('.info__text').classList.toggle('info__text--active');
-    if (this.textContent == "Показать полностью") {
-        this.textContent = "Скрыть текст";
-    } else {
-        this.textContent = "Показать полностью";
+    const groups = document.querySelector('.popup-filter__groups');
+    if (groups) {
+        let groupHtml = '';
+        for(let i = 0; i < titles.length; i++) {
+            let buttonsHtml = '';
+            for(let j = 0; j < buttons[i].length; j++) {
+                buttonsHtml = buttonsHtml + `<button>${buttons[i][j]}</button>`
+            }
+            groupHtml = groupHtml + `<div class="popup-filter__group">
+                        <h4>${titles[i]}</h4>
+                        <div class="popup-filter__checkbox">
+                            ${buttonsHtml}
+                        </div>
+                    </div>`;
+        }
+        groups.innerHTML = groupHtml;
+    }
+
+    // формирование пагинации
+    const n = 1000;
+    const here = document.querySelector('.here');
+    if (here) {
+        let paginationHtml = '';
+        for (let i = 1; i <= n; i++) {
+            if (i <= 3 || i > n - 3) {
+                paginationHtml = paginationHtml + `<li>
+                        <a href="#" class="pagination__button">${i}</a>
+                    </li>`;
+            }
+            if (i == 3) {
+                paginationHtml = paginationHtml + `<li>
+                        <span>...</span>
+                    </li>`;
+            }
+        }
+        here.outerHTML = paginationHtml;
+    }
+
+    // формирование категорий на главной странице
+    const categories = [
+        {
+            icon: "icon-sale",
+            title: 'Акции',
+            isActive: true
+        },
+        {
+            icon: "icon-pizza",
+            title: 'Пицца',
+            isActive: false
+        },
+        {
+            icon: "icon-sushi",
+            title: 'Суши',
+            isActive: false
+        },
+        {
+            icon: "icon-juice",
+            title: 'Напитки',
+            isActive: false
+        },
+        {
+            icon: "icon-snakes",
+            title: 'Закуски',
+            isActive: false
+        },
+        {
+            icon: "icon-combo",
+            title: 'Комбо',
+            isActive: false
+        },
+        {
+            icon: "icon-desert",
+            title: 'Десерты',
+            isActive: false
+        },
+        {
+            icon: "icon-souce",
+            title: 'Соусы',
+            isActive: false
+        },
+    ];
+
+    const categoriesList = document.querySelector('.categories__list');
+    if (categoriesList) {
+        let categoriesHtml = '';
+        categories.forEach(function (category) {
+            let isActive = '';
+            if (category.isActive == true) {
+                isActive = 'active';
+            }
+            categoriesHtml = categoriesHtml + `<li>
+                        <a href="#" class="categories__link ${isActive}">
+                            <svg width="24" height="24">
+                                <use xlink:href="images/icons/sprite.svg#${category.icon}" />
+                            </svg>
+                            ${category.title}
+                        </a>
+                    </li>`
+        });
+        categoriesList.innerHTML = categoriesHtml;
+    }
+
+    //увеличение количества торавра в корзине
+    
+    /*
+    const buttonPlus = document.querySelector('.cart__item-plus')
+    const buttonMinus = document.querySelector('.cart__item-minus')
+    const cartInput = document.querySelector('.cart__item-quantity')
+    if(cartInput){
+        if(buttonPlus){
+            buttonPlus.addEventListener('click', function(){
+                if(+cartInput.value < 999){
+                    cartInput.value = +cartInput.value + 1;
+                }
+            })
+        }
+        if(buttonMinus){
+            buttonMinus.addEventListener('click', function(){
+                if (+cartInput.value > 0){
+                    cartInput.value = +cartInput.value - 1;
+                }
+            })
+        }
+    }
+    */
+
+
+
+    const buttonsPlus = document.querySelectorAll('.cart__item-plus');
+    const buttonsMinus = document.querySelectorAll('.cart__item-minus');
+    if(buttonsPlus.length){
+        buttonsPlus.forEach(function(buttonPlus){
+            buttonPlus.addEventListener('click', function(){
+                const container = this.closest('.cart__item-calc');
+                const cartInput = container.querySelector('.cart__item-quantity');
+                if(+cartInput.value < 999){
+                    cartInput.value = +cartInput.value + 1;
+                }
+            });
+        })
+    }
+    if(buttonsMinus.length){
+        buttonsMinus.forEach(function(buttonMinus){
+            buttonMinus.addEventListener('click', function(){
+                const container = this.closest('.cart__item-calc');
+                const cartInput = container.querySelector('.cart__item-quantity');
+                if(+cartInput.value > 0){
+                    cartInput.value = +cartInput.value - 1;
+                }
+            });
+        })
     }
 });
-*/
 
-/*
-let counter = 1;
-let textButton = ["Показать полностью", "Скрыть"];
 
-document.querySelector('.info__link').addEventListener('click', function () {
-    document.querySelector('.info__text').classList.toggle('info__text--active');
-    this.textContent = textButton[counter % 2];
-    counter++;
-})
-*/
+let cartItems = [
+    {
+        image: 'images/product-1.jpg',
+        name: 'Пепперони по-деревенски',
+        desc: 'Традиционное тесто, 23 см',
+        price: 299,
+        quantity: 1,
+    },
+    {
+        image: 'images/product-2.jpg',
+        name: 'Пепперони по-деревенски',
+        desc: 'Традиционное тесто, 23 см',
+        price: 299,
+        quantity: 1,
+    },
+    {
+        image: 'images/product-3.jpg',
+        name: 'Пепперони по-деревенски',
+        desc: 'Традиционное тесто, 23 см',
+        price: 299,
+        quantity: 1,
+    },
+    {
+        image: 'images/product-1.jpg',
+        name: 'Пепперони по-деревенски',
+        desc: 'Традиционное тесто, 23 см',
+        price: 299,
+        quantity: 1,
+    },
+    {
+        image: 'images/product-1.jpg',
+        name: 'Пепперони по-деревенски',
+        desc: 'Традиционное тесто, 23 см',
+        price: 299,
+        quantity: 1,
+    },
+    {
+        image: 'images/product-1.jpg',
+        name: 'Пепперони по-деревенски',
+        desc: 'Традиционное тесто, 23 см',
+        price: 299,
+        quantity: 1,
+        index:
+    }
+]
 
-let textButtonTime;
-let textButton = "Скрыть текст";
-
-document.querySelector('.info__link').addEventListener('click', function () {
-    document.querySelector('.info__text').classList.toggle('info__text--active');
-    textButtonTime = textButton;
-    textButton = this.textContent;
-    this.textContent = textButtonTime;
-})
+const cartItemsList = document.querySelector('.cart__items');
+if (cartItemsList) {
+    let cartItemsHtml = '';
+    cartItems.forEach(function (item) {
+        cartItemsHtml += `
+            <div class="cart__item">
+                <div class="cart__item-about">
+                    <img src="${item.image}" alt="${item.name}" class="cart__item-img">
+                    <div class="cart__item-info">
+                        <div class="cart__item-name">${item.name}</div>
+                        <div class="cart__item-desc">${item.desc}</div>
+                    </div>
+                </div>
+                <div class="cart__item-numbers">
+                    <div class="cart__item-calc">
+                        <button class="cart__item-minus" data-index="${item.index}">-</button>
+                        <input type="text" value="${item.quantity}" class="cart__item-quantity" readonly>
+                        <button class="cart__item-plus">+</button>
+                    </div>
+                    <div class="cart__item-sum">${item.price * item.quantity} ₽</div>
+                </div>
+            </div>
+        `;
+    });
+    cartItemsList.innerHTML = cartItemsHtml; 
+}
